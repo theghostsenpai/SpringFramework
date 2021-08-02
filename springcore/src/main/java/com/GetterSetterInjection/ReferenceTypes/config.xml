@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean name="score1"
+		class="com.GetterSetterInjection.ReferenceTypes.Scores" p:maths="78"
+		p:physics="92" p:chemistry="94" p:biology="95" />
+	<bean name="student1"
+		class="com.GetterSetterInjection.ReferenceTypes.Student"
+		p:studentName="Swagata Dasgupta" p:scores-ref="score1" />
+	<!-- <property name="scores"> -->
+	<!-- <ref bean="score1"/> -->
+	<!-- </property> -->
+</beans>
